@@ -1,0 +1,17 @@
+body {
+	padding-top: 70px;
+}
+.container-fluid{
+    background-color: deepskyblue;    
+}
+.container-fluid .navbar-header .navbar-text{
+    color:white;
+    font-weight: 600;
+}
+.tamanoLogo{
+    width: 40px;
+    height: 40px;
+}
+#publicarTwitt{
+    background-color: cornsilk;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Twitter</title>
+    <link rel="stylesheet" href="css/main.css">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+<body>
+ <nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header text-center">
+				<p class="navbar-text">Twitter</p>
+				<img class="tamanoLogo" src="img/twitter.png">
+			</div>
+		</div>
+	</nav>
+	<!--Termina codigo del nav-->
+	<section class="container">
+		<form id="to-do-form">
+			<div class="form-group">
+				<label for="message">Twitts</label>
+				<textarea id="message" name="message" class="form-control" rows="3"></textarea>
+			</div>
+			<button id="add-button" type="submit" class="btn btn-default" disabled>Agregar</button>
+		</form>
+	</section>
+	<section id="posts" class="container">
+    </section>
+  
+   
+    <script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
