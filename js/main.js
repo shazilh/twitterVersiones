@@ -5,7 +5,8 @@
 	var cargarPagina = function () {
 		$("#to-do-form").submit(agregarToDo);
 		$("#message").keyup(validarContenido);
-
+        $("#message").keyup(caractRest);
+        $("#message").keyup(cambiarColor);
         
 	};
 
@@ -62,7 +63,26 @@
             $addButton.attr("disabled", true);   
         }
 	};
-     
+     var caractRest = function () {
+
+        var caractMenos = 0;
+        var maxCaract = 140;
+
+        caractMenos = $("#message").val().length;
+
+        var totalCaract = maxCaract - caractMenos;
+
+        $("#contador").text(totalCaract);
+  };
+  
+  var cambiarColor = function() {
+        var $imprCont = $("#contadorId");
+        if($(this).val().trim().length > 129) {
+          $imprCont.css("color", "red");
+        } else if ($(this).val().trim().length > 119) {
+          $imprCont.css("color", "orange");
+        }
+  };
         
 	// Cuando carga la página
 	$(document).ready(cargarPagina);
