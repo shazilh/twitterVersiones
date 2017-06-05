@@ -1,9 +1,12 @@
 (function () {
-	var contador = 0;
+	var contador = 140;
+    $("#contador").text(contador);
 
 	var cargarPagina = function () {
 		$("#to-do-form").submit(agregarToDo);
 		$("#message").keyup(validarContenido);
+
+        
 	};
 
 	var agregarToDo = function (e) {
@@ -41,26 +44,26 @@
 		// Borrar contenido de textarea
 		$mensajeContenedor.val("");
 		$botonAgregar.attr("disabled", true);
-
-		// bind, apply, call
-
-		contador++;
+        
 	};
 
-	var eliminarToDo = function () {
-		$(this).parent().remove();
-	};
 
 	var validarContenido = function () {
 		var $addButton = $("#add-button");
 		// .trim() solo borra los espacios de sobra a los costados (izquierda y derecha)
-		if($(this).val().trim().length > 0) {
+		if($(this).val().trim().length > 140) {
+            $("#contador").text(contador);
+            contador--;
+			$addButton.attr("disabled",true);
+		} else if
+            ($(this).val().trim().length > 0){
 			$addButton.removeAttr("disabled");
-		} else {
-			$addButton.attr("disabled", true);
-		}
+		}else{
+            $addButton.attr("disabled", true);   
+        }
 	};
-
+     
+        
 	// Cuando carga la página
 	$(document).ready(cargarPagina);
 })();
